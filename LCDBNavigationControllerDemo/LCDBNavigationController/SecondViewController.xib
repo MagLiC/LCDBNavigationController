@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -15,18 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUh-KJ-EuG">
-                    <rect key="frame" x="117" y="281" width="141" height="105"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <state key="normal" title="PopTORoot">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="popToRoot:" destination="-1" eventType="touchUpInside" id="ygv-qQ-AZT"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtG-s7-zaN">
-                    <rect key="frame" x="117" y="145" width="134" height="86"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtG-s7-zaN">
+                    <rect key="frame" x="117" y="193" width="141" height="38"/>
                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                     <state key="normal" title="POP">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,8 +25,22 @@
                         <action selector="pop:" destination="-1" eventType="touchUpInside" id="KDe-1J-Mlm"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPP-1l-lPS">
-                    <rect key="frame" x="66" y="448" width="237" height="101"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUh-KJ-EuG">
+                    <rect key="frame" x="117" y="281" width="141" height="105"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="141" id="Nl6-Zp-aht"/>
+                        <constraint firstAttribute="height" constant="105" id="ysa-f6-MFp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="PopTORoot">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="popToRoot:" destination="-1" eventType="touchUpInside" id="ygv-qQ-AZT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPP-1l-lPS">
+                    <rect key="frame" x="103" y="436" width="168" height="39"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <state key="normal" title="PushToTableView">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,12 +52,29 @@
             </subviews>
             <color key="backgroundColor" red="0.43921568630000002" green="0.45098039220000002" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="eUh-KJ-EuG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0Qq-4H-Cyw"/>
+                <constraint firstItem="yPP-1l-lPS" firstAttribute="top" secondItem="eUh-KJ-EuG" secondAttribute="bottom" constant="50" id="0m9-uN-clA"/>
+                <constraint firstItem="yPP-1l-lPS" firstAttribute="centerX" secondItem="eUh-KJ-EuG" secondAttribute="centerX" id="Bum-Fn-gOO"/>
                 <constraint firstItem="eUh-KJ-EuG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="117" id="M1M-qr-A3H"/>
                 <constraint firstAttribute="bottom" secondItem="eUh-KJ-EuG" secondAttribute="bottom" constant="281" id="SPw-1L-NVA"/>
+                <constraint firstItem="eUh-KJ-EuG" firstAttribute="height" secondItem="PtG-s7-zaN" secondAttribute="height" id="SvW-93-fba"/>
+                <constraint firstItem="eUh-KJ-EuG" firstAttribute="centerX" secondItem="PtG-s7-zaN" secondAttribute="centerX" id="VcB-Ug-2TM"/>
+                <constraint firstItem="eUh-KJ-EuG" firstAttribute="top" secondItem="PtG-s7-zaN" secondAttribute="bottom" constant="50" id="fDP-P7-xUP"/>
                 <constraint firstAttribute="trailing" secondItem="eUh-KJ-EuG" secondAttribute="trailing" constant="117" id="fsn-sT-6Te"/>
                 <constraint firstItem="eUh-KJ-EuG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="281" id="oPj-H6-8v9"/>
+                <constraint firstItem="eUh-KJ-EuG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="p1X-Ou-mAl"/>
+                <constraint firstItem="eUh-KJ-EuG" firstAttribute="width" secondItem="PtG-s7-zaN" secondAttribute="width" id="yMk-Io-9GF"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="M1M-qr-A3H"/>
+                    <exclude reference="SPw-1L-NVA"/>
+                    <exclude reference="SvW-93-fba"/>
+                    <exclude reference="fsn-sT-6Te"/>
+                    <exclude reference="oPj-H6-8v9"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="499.5" y="298.5"/>
         </view>
     </objects>
