@@ -305,9 +305,7 @@ typedef NS_ENUM(NSUInteger, navigationControllerWayToPop) {
 - (void)screenEdgePanGestureRecognizerTouch:(UIScreenEdgePanGestureRecognizer *)sender
 {
     UIView *view = [self lastViewControllerBackImageView];
-    CGPoint selfViewPoint;
     if (sender.state == UIGestureRecognizerStateBegan) {
-        selfViewPoint = self.view.frame.origin;
         self.wayToPop = LCNavWayFromLeftToRight;
         [self backImageShowWithView:view];
         
@@ -317,7 +315,7 @@ typedef NS_ENUM(NSUInteger, navigationControllerWayToPop) {
     } else if (sender.state == UIGestureRecognizerStateEnded) {
         if (self.view.frame.origin.x < self.view.frame.size.width * panLimitScale) {
             [UIView animateWithDuration:animationTimeInterval animations:^{
-                self.view.frame = CGRectMake(selfViewPoint.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+                self.view.frame = CGRectMake(0, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
                 self.backView.frame = CGRectMake(- self.backView.frame.size.width / 2 + self.view.frame.origin.x / 2 , self.backView.frame.origin.y, self.backView.frame.size.width, self.backView.frame.size.height);
             } completion:^(BOOL finished) {
                 [self backImageHideAndDelete:view andDicKeys:@[]];
@@ -329,7 +327,7 @@ typedef NS_ENUM(NSUInteger, navigationControllerWayToPop) {
             } completion:^(BOOL finished) {
                 UIViewController *vc = [self popViewControllerAnimated:NO];
                 [self backImageHideAndDelete:view andDicKeys:@[vc]];
-                self.view.frame = CGRectMake(selfViewPoint.x, selfViewPoint.y, self.view.frame.size.width, self.view.frame.size.height);
+                self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
             }];
         }
     }

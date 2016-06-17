@@ -20,7 +20,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     RootViewController *rootVC = [[RootViewController alloc]initWithNibName:@"RootViewController" bundle:nil];
     LCDBNavigationController *rootNav = [[LCDBNavigationController alloc]initWithRootViewController:rootVC];
     UITabBarController *tabbar = [[UITabBarController alloc]init];
